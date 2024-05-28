@@ -37,4 +37,12 @@ html, body {
 .content{
     background-color: lightgray;
     grid-area: 2 / 2 / 3 / 3;
+    display:grid;
+    grid-template-columns: 75% 25%;
+}
+.content-projects{
+    display:grid;
+}
+.content-side{
+    display:grid;
 }
