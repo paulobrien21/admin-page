@@ -13,6 +13,8 @@ html, body {
 .header{
     background-color: white;
     grid-area: 1 / 2 / 2 / 3;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 .sidebar{
     background-color: rgb(54, 165, 255);
@@ -51,13 +53,34 @@ html, body {
 }
 .content-side{
     display:grid;
+    grid-template-columns: 1;
+    grid-template-rows: auto 1fr auto 1fr;
+    gap:30px;
+    margin-bottom: 50px;
+    margin-right: 60px;
 }
 .content-card, .announcement-card, .trending-card{
     background-color: white;
+    border-radius: 12px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
 .content-card{
     max-height: 400px;
-    border-radius: 3%;
+    position:relative;
+}
+.content-card::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 12px;
+    height: 100%;
+    background-color: goldenrod; 
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+.announcement-card{
+
 }
 h2{
     max-height: fit-content;
