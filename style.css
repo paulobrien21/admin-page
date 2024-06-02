@@ -1,3 +1,11 @@
+:root{
+    --header-color: white;
+    --sidebar-color: rgb(25,146,212);
+    --main-content-bg-color: rgb(226,232,240);
+    --small-text-color: rgb(120, 124, 129);
+    --large-text-color: rgb(54, 54, 54); 
+    font-family: "Roboto";
+}
 html, body {
     margin: 0;
     padding: 0;
@@ -12,7 +20,7 @@ html, body {
 }
 
 .header{
-    background-color: white;
+    background-color: var(--header-color);
     grid-area: 1 / 2 / 2 / 3;
     position: relative;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -35,6 +43,7 @@ html, body {
     background-color: rgb(233, 233, 233);
     box-shadow: none;
     border:none;
+    padding-left: 10px;
 }
 .header-upper-right-container{
     grid-area: 1 / 3 / 2 / 4;
@@ -56,7 +65,7 @@ html, body {
     background-color: rgb(64, 226, 43);
 }
 .sidebar{
-    background-color: rgb(25,146,212);
+    background-color: var(--sidebar-color);
     grid-area: 1 / 1 / 3 / 2;
     color: white;
     letter-spacing: 2px;
@@ -76,7 +85,7 @@ html, body {
     margin-top: 20px;
 }
 .content{
-    background-color: rgb(226,232,240);
+    background-color: var(--main-content-bg-color);
     grid-area: 2 / 2 / 3 / 3;
     display:grid;
     grid-template-columns: 70% 30%;
@@ -99,7 +108,7 @@ html, body {
     margin-right: 60px;
 }
 .content-card, .announcement-card, .trending-card{
-    background-color: white;
+    background-color: var(--header-color);
     border-radius: 12px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -132,6 +141,7 @@ html, body {
 .content h2{
     max-height: fit-content;
     margin-bottom: -20px;
+    color: var(--large-text-color);
 }
 h3{
     display:inline-block;
@@ -147,8 +157,9 @@ h4{
     grid-area: 1/1/2/-1;
 }
 p{
-    color:rgb(112, 112, 112);
-    line-height: 1.2;
+    color:var(--small-text-color);
+    line-height: 1.3;
+    font-family: "Roboto";
 }
 .announcement-content > p{
     margin-top: 2px;
