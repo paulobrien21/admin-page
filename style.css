@@ -33,9 +33,10 @@ html, body {
     display: grid;
     justify-content: baseline;
     align-items:center;
+    grid-template-columns: 70px 2fr;
 }
 .searchbar{
-    margin-left: 90px;
+    margin-left: 20px;
     width: 75%;
     border-radius: 15px;
     border-color: rgb(233, 233, 233);
@@ -70,10 +71,16 @@ html, body {
     color: white;
     letter-spacing: 2px;
 }
+.sidebar-header{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 120px;
+    justify-content: baseline;
+    align-items: center;
+}
 .sidebar h1{
     font-size: 40px;
-    margin-left: 40px;
-    margin-bottom: 60px;
+    margin-left: 5px;
 }
 .sidebar ul{
     margin-bottom: 60px;
@@ -117,7 +124,7 @@ html, body {
     position:relative;
     display:grid;
     grid-template-columns: auto;
-    grid-template-rows: 60px 100px 20px;
+    grid-template-rows: 60px auto 70px;
     gap: 5px;
 }
 .content-card::before{
@@ -130,6 +137,15 @@ html, body {
     background-color: rgb(224, 180, 69); 
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
+}
+.content-card-icons{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    justify-content: end;
+    align-items: center;
+    margin-right: 25px;
+    margin-bottom: 50px;
+    gap:30px;
 }
 .announcement-card{
     display: grid;
@@ -183,4 +199,26 @@ p{
 .announcement-content{
     display: inline;
     float:none;
+}
+.svg-sidebar{
+    width: 30px;
+    height:30px;
+    fill: var(--header-color);
+    margin-right: 30px;
+}
+.svg-search{
+    width: 30px;
+    height:30px;
+    margin-left: auto;
+}
+.svg-dashboard{
+    width: 55px;
+    height:55px;
+    fill:var(--header-color);
+    padding-left: 30px;
+    margin-right: 15px;
+}
+.svg-content-card{
+    width:30px;
+    height: 30px;
 }
