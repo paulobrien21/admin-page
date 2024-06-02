@@ -62,14 +62,16 @@ html, body {
 }
 .header-upper-right-container{
     grid-area: 1 / 3 / 2 / 4;
-    background-color: blueviolet;
     display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap:30px;
     justify-content: center;
     align-items: center;
 
 }
 .header-upper-right-container h2{
     font-size: 1.3em;
+    font-weight: 900;
 }
 .user-details-container{
     grid-area: 2 / 1 / 3 / 2;
@@ -79,7 +81,25 @@ html, body {
 }
 .header-buttons-container{
     grid-area: 2 / 2 / 3 / 4;
-    background-color: rgb(64, 226, 43);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: end;
+    align-items: center;
+}
+.header-button{
+    height:50px;
+    width:110px;
+    background-color: var(--sidebar-color);
+    margin-right: 60px;
+    border-radius: 25px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.header-button p{
+    color: white;
+    margin-bottom: 14px;
+    font-size: 18px;
 }
 .sidebar{
     background-color: var(--sidebar-color);
@@ -241,8 +261,17 @@ p{
 .svg-profile-large{
     width:100px;
     height: 100px;
-    fill: rgb(207, 182, 37);
+    fill: rgb(228, 199, 38);
     grid-area: 1 / 1 / 3 / 2;
     justify-self: end;
     align-self: center;
+}
+.svg-header-bell{
+    width:30px;
+    height: 30px;
+}
+.svg-profile-small{
+    width:60px;
+    height: 60px;
+    fill: rgb(228, 199, 38);
 }
